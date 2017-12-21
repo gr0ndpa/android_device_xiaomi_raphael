@@ -145,6 +145,12 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     vendor/nxp/opensource/sn100x
 
+# Seccomp
+PRODUCT_COPY_FILES += \
+    device/xiaomi/raphael/seccomp/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
+    device/xiaomi/raphael/seccomp/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
+
+
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
