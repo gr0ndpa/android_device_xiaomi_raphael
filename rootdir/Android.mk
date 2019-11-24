@@ -22,4 +22,7 @@ LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := etc/init.safailnet.rc
 LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/init
+LOCAL_MODULE       := init.qcom.post_boot.sh
+LOCAL_SRC_FILES    := etc/init.qcom.post_boot.sh
+LOCAL_MODULE_PATH := $(TARGET_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/bin
 include $(BUILD_PREBUILT)
