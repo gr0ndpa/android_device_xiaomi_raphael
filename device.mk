@@ -171,3 +171,7 @@ PRODUCT_PACKAGES += \
 #Msm irq balance
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:system/product/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/msm_irqbalance.conf
+
+# QTI common
+-include vendor/qcom/common/av/qti-av.mk
+-include vendor/qcom/common/perf/qti-perf.mk
