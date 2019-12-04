@@ -21,7 +21,8 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-aosip
 
 # Properties
 -include $(LOCAL_PATH)/system_prop.mk
@@ -59,6 +60,9 @@ PRODUCT_PACKAGES += \
     libvulkan
 
 # Fingerprint
+PRODUCT_COPY_FILES += \
+    vendor/aosip/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:system/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
+
 PRODUCT_PACKAGES += \
     lineage.biometrics.fingerprint.inscreen@1.0-service.raphael
 
